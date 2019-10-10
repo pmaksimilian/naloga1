@@ -1,0 +1,43 @@
+$primary-color: #e2dbce;
+$secondary-color: #b8147c;
+$text-color: #737373;
+
+* {
+    box-sizing: border-box;
+}
+
+@mixin colored-radio-button {
+    input[type='radio'] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    
+    input[type='radio']:after {
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        top: 2px;
+        left: -1px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    input[type='radio']:checked:after {
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        top: 2px;
+        left: -1px;
+        position: relative;
+        background-color: $secondary-color;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+}

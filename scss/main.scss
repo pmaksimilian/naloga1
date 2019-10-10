@@ -1,0 +1,156 @@
+@import 'config';
+
+body {
+    background-color: $primary-color;
+    color: $text-color;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 5vw;
+}
+
+.heading {
+    width: 100%;
+    color: $secondary-color;
+    text-transform: uppercase;
+    
+    h1 {
+        font-weight: 100;
+        font-size: 2rem;
+        letter-spacing: 3px;
+        margin-bottom: 1rem;
+    }
+
+    /* line under the heading */
+    &__underline {
+        width: 45px;
+        height: 2px;
+        background: $secondary-color;
+        margin-bottom: 10px;
+    }
+}
+
+/* form element */
+.send-form {
+    width: 100%;
+    font-size: 15px;
+    display: flex;
+
+    /* bigger textarea */
+    &__text {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 5%;
+        border-right: 1px solid;
+        border-color: $text-color;
+
+        textarea {
+            width: 100%;
+            margin-top: 5px;
+            padding: 5px;
+            border: none;
+        }
+    }
+
+    /* div which includes radio buttons, name and email input */
+    &__data {
+        width: 50%;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    /* radio buttons */
+    &__salutation {
+
+        .radio-group {
+            margin: 10px 0;
+
+            label {
+                padding-right: 2vw;
+            }
+        }     
+        
+        @include colored-radio-button;
+    }
+
+    /* separate divs for name and email, with same class */
+    &__name-email {
+        margin-top: 10px;
+    }
+
+    /* input for name and email */
+    &__box {
+        line-height: 40px;
+        margin-top: 5px;
+        padding: 5px;
+        width: 100%;
+        border: none;
+    }
+
+    /* div including submit button */
+    &__send-button {
+        text-align: right;
+        margin-right: 10vw;
+        
+        button {
+            padding: 15px 10px;
+            background-color: $secondary-color;
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+
+            .send {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .arrow {
+                padding-right: 15px;
+                padding-left: 15px;
+                font-weight: bold;
+            }
+
+        }
+    }
+}
+
+/* "*required field" under input boxes */
+.req-field {
+    font-size: 10px;
+    padding-top: 2px;
+
+    span {
+        font-size: 15px;
+        color: $secondary-color;
+    }    
+}
+
+/* responsive */
+@media screen and (max-width: 500px) {
+    .radio-group {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .send-form {
+        display: initial;
+
+        &__text {
+            border-right: none;
+            width: 100%;
+        }
+    
+        &__data {
+            width: 100%;
+        }
+    }    
+}

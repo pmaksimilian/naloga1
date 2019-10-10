@@ -1,0 +1,209 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #e2dbce;
+  color: #737373;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5vh 5vw;
+}
+
+.heading {
+  width: 100%;
+  color: #b8147c;
+  text-transform: uppercase;
+  /* line under the heading */
+}
+
+.heading h1 {
+  font-weight: 100;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+
+.heading__underline {
+  width: 45px;
+  height: 2px;
+  background: #b8147c;
+  margin-bottom: 10px;
+}
+
+/* form element */
+.send-form {
+  width: 100%;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* bigger textarea */
+  /* div which includes radio buttons, name and email input */
+  /* radio buttons */
+  /* separate divs for name and email, with same class */
+  /* input for name and email */
+  /* div including submit button */
+}
+
+.send-form__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  padding: 5%;
+  border-right: 1px solid;
+  border-color: #737373;
+}
+
+.send-form__text textarea {
+  width: 100%;
+  margin-top: 5px;
+  padding: 5px;
+  border: none;
+}
+
+.send-form__data {
+  width: 50%;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.send-form__salutation .radio-group {
+  margin: 10px 0;
+}
+
+.send-form__salutation .radio-group label {
+  padding-right: 2vw;
+}
+
+.send-form__salutation input[type='radio'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.send-form__salutation input[type='radio']:after {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  top: 2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.send-form__salutation input[type='radio']:checked:after {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  top: 2px;
+  left: -1px;
+  position: relative;
+  background-color: #b8147c;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.send-form__name-email {
+  margin-top: 10px;
+}
+
+.send-form__box {
+  line-height: 40px;
+  margin-top: 5px;
+  padding: 5px;
+  width: 100%;
+  border: none;
+}
+
+.send-form__send-button {
+  text-align: right;
+  margin-right: 10vw;
+}
+
+.send-form__send-button button {
+  padding: 15px 10px;
+  background-color: #b8147c;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+}
+
+.send-form__send-button button .send {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.send-form__send-button button .arrow {
+  padding-right: 15px;
+  padding-left: 15px;
+  font-weight: bold;
+}
+
+/* "*required field" under input boxes */
+.req-field {
+  font-size: 10px;
+  padding-top: 2px;
+}
+
+.req-field span {
+  font-size: 15px;
+  color: #b8147c;
+}
+
+/* responsive */
+@media screen and (max-width: 500px) {
+  .radio-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .send-form {
+    display: initial;
+  }
+  .send-form__text {
+    border-right: none;
+    width: 100%;
+  }
+  .send-form__data {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
